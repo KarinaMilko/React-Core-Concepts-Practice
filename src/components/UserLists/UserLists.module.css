@@ -1,0 +1,48 @@
+.usersData {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.userPhoto {
+  width: 50px;
+  height: 50px;
+  border: 1px solid blue;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.userContainerName {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userAge {
+  font-size: 12px;
+}
+
+.selectedUser {
+  color: blue;
+  outline: 1px solid blue;
+  border-radius: 15px;
+  background-color: lightblue;
+}
+
+.trashIcon {
+  background-color: inherit;
+  border: none;
+  align-items: start;
+  display: flex;
+  margin-left: auto;
+  padding: 20px;
+  border-radius: 15px;
+}
