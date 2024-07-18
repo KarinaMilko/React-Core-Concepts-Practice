@@ -1,0 +1,89 @@
+.formContainer {
+  font-family: sans-serif;
+  max-width: 200px;
+  min-width: 100px;
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 0 0 5px lightgrey;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.iconEdit {
+  border: 1px solid lightgreen;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.formHeader {
+  color: grey;
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputCaption {
+  color: green;
+  font-size: 0.5rem;
+}
+
+.formInput {
+  font-size: 0.5rem;
+  padding: 10px;
+}
+
+.iconCheckContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconText {
+  color: grey;
+  font-size: 0.5rem;
+}
+
+.submitBtn {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  font-size: 0.5rem;
+  padding: 10px;
+}
+
+.formLink {
+  font-size: 0.5rem;
+  color: grey;
+}
+
+.linkSingIn {
+  color: green;
+  text-decoration: none;
+}
+
+.validInput {
+  background-color: lightgreen;
+}
+
+.invalidInput {
+  background-color: lightcoral;
+}

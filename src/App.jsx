@@ -1,11 +1,19 @@
-import UserLists from "./components/UserLists";
+// import UserLists from "./components/UserLists";
+
+// function App() {
+//   return (
+//     <>
+//       <UserLists />;
+//     </>
+//   );
+// }
+
+// export default App;
+
+import SignUpForms from "./components/SignUpForms";
 
 function App() {
-  return (
-    <>
-      <UserLists />;
-    </>
-  );
+  return <SignUpForms />;
 }
 
 export default App;
