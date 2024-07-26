@@ -87,7 +87,8 @@ function UserLists() {
       (uItem) => uItem.isSelected
     );
     if (prevSelectedUserListIndex !== -1) {
-      copyUserLists[prevSelectedUserListIndex].isSelected = false;
+      copyUserLists[selectedUserListIndex].isSelected =
+        !copyUserLists[selectedUserListIndex].isSelected;
     }
     copyUserLists[selectedUserListIndex].isSelected = true;
     setUsers(copyUserLists);
