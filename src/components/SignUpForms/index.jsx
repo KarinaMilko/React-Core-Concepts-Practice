@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaEdit } from "react-icons/fa";
-import styles from "./SignUpForms.module.css";
 import classNames from "classnames";
+import styles from "./SignUpForms.module.css";
 
 const LOGIN_FOR_REG_EXP = {
-  name: /^([A-Z][a-z]{1,31})+ ([A-Z][a-z]{1,31})$/,
+  name: /^([A-Z][a-z]{1,31}) ([A-Z][a-z]{1,31})$/,
   email: /^.+@.+$/,
   password: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[!@#$%^&.*]).{8,32}$/,
 };
@@ -13,7 +13,7 @@ function SignUpForms() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
+  const [isAgree, setIsAgree] = useState(false);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -28,7 +28,7 @@ function SignUpForms() {
   };
 
   const handleCheckboxChange = (e) => {
-    setCheckbox(e.target.checked);
+    setIsAgree(e.target.checked);
   };
 
   const handleFormSubmit = (e) => {
@@ -36,7 +36,7 @@ function SignUpForms() {
     setName("");
     setEmail("");
     setPassword("");
-    setCheckbox(false);
+    setIsAgree(false);
   };
 
   const inputNameClassName = classNames(styles.formInput, {
@@ -59,7 +59,7 @@ function SignUpForms() {
       LOGIN_FOR_REG_EXP.name.test(name) &&
       LOGIN_FOR_REG_EXP.email.test(email) &&
       LOGIN_FOR_REG_EXP.password.test(password) &&
-      checkbox
+      isAgree
     );
   };
 
@@ -108,7 +108,7 @@ function SignUpForms() {
           <input
             type="checkbox"
             name="checkbox"
-            checked={checkbox}
+            checked={isAgree}
             onChange={handleCheckboxChange}
           />
           <span className={styles.iconText}>
@@ -122,13 +122,13 @@ function SignUpForms() {
         >
           Sing Up
         </button>
-        <div className={styles.formLink}>
-          I'm already a member!{" "}
-          <a className={styles.linkSingIn} href="#">
-            Sing In
-          </a>
-        </div>
       </form>
+      <div className={styles.formLink}>
+        I'm already a member!{" "}
+        <a className={styles.linkSingIn} href="#">
+          Sing In
+        </a>
+      </div>
     </div>
   );
 }
