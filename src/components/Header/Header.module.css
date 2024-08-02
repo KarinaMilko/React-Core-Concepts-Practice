@@ -1,0 +1,15 @@
+.headerContainer {
+  background-color: lightskyblue;
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

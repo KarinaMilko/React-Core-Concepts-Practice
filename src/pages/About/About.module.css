@@ -1,0 +1,12 @@
+.containerAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px;
+  padding: 50px;
+}
+
+.headerAbout {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

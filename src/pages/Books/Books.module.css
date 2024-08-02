@@ -1,0 +1,24 @@
+.containerBooks {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.headerBooks {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.containerNavBooks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.LinkBooks {
+  text-decoration: none;
+  color: blueviolet;
+}
