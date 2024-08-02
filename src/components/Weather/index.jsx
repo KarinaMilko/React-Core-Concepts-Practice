@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import styles from "./Weather.module.sass";
 import { FaTemperatureLow, FaWind } from "react-icons/fa";
+import styles from "./Weather.module.sass";
 
 const weatherApi =
   "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&forecast_days=1";
 
 function Weather() {
   const [weather, setWeather] = useState(null);
-  const [tempUnit, setTempUnit] = useState("fahrenheit");
-  const [windUnit, setWindUnit] = useState("m/s");
+  const [tempUnit, setTempUnit] = useState("celsius");
+  const [windUnit, setWindUnit] = useState("kmh");
 
   useEffect(() => {
     fetch(
