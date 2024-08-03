@@ -1,0 +1,47 @@
+@import './../../common/style/templates.sass'
+@import './../../common/style/vars.sass'
+
+.mainContainer
+    box-sizing: none
+    border-radius: 15px
+    background-color: $main-bg-color-container
+    margin: 30px
+    flex-wrap: wrap
+    min-width: 250px
+    max-width: 500px
+
+.containerWeather
+    @extend %flexContainerRow
+    align-items: stretch
+    padding: 20px
+    gap: 30px
+    @media screen and (max-width:400px)
+        flex-direction: column
+
+.containerLabel
+    @extend %flexContainerColumn
+    gap: 10px
+
+.containerUnit
+    @extend %flexContainerColumn
+    padding: 30px
+    border-radius: 15px
+    background-color: $main-bg-color-partcontainer
+    gap: 30px
+
+.containerCurrent
+    @extend %flexContainerColumn
+    padding: 30px
+    border-radius: 15px
+    background-color: $main-bg-color-partcontainer
+    gap: 30px
+.headerUnit, .headerCurrent
+    text-align: center
+    font-weight: bold
+.current
+    @extend %flexContainerColumn
+    text-align: center
+    gap: 10px
+.display
+    @extend %flexContainerRow
+    gap: 20px
