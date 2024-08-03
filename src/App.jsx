@@ -42,39 +42,39 @@
 
 // export default App;
 //---------------------------------------------------------------------
-import Weather from "./components/Weather";
-
-function App() {
-  return (
-    <>
-      <Weather />
-    </>
-  );
-}
-
-export default App;
-//-------------------------------------------------------------
-
-// import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-// import Books from "./pages/Books";
-// import BasePage from "./pages/BasePage";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import NotFound from "./components/NotFound";
+// import Weather from "./components/Weather";
 
 // function App() {
 //   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<BasePage />}>
-//           <Route index element={<Home />}></Route>
-//           <Route path="/about" element={<About />}></Route>
-//           <Route path="/books/*" element={<Books />}></Route>
-//           <Route path="*" element={<NotFound />}></Route>
-//         </Route>
-//       </Routes>
-//     </Router>
+//     <>
+//       <Weather />
+//     </>
 //   );
 // }
 
 // export default App;
+// -------------------------------------------------------------
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Books from "./pages/Books";
+import BasePage from "./pages/BasePage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./components/NotFound";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<BasePage />}>
+          <Route index element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/books/*" element={<Books />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

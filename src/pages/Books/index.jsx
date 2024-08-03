@@ -14,18 +14,16 @@ function Books() {
         Meanwhile, my books are where I share more comprehensive analysis on
         these topics.
       </p>
-      <div className={styles.containerNavBooks}>
-        <nav>
-          <Link to="/atomic-habits" className={styles.LinkBooks}>
-            Atomic Habits
-          </Link>
-        </nav>
-        <nav>
-          <Link to="/habit-journal" className={styles.LinkBooks}>
-            Habit Journal
-          </Link>
-        </nav>
-      </div>
+
+      <nav className={styles.containerNavBooks}>
+        <Link to="atomic-habits" className={styles.LinkBooks}>
+          Atomic Habits
+        </Link>
+        <Link to="habit-journal" className={styles.LinkBooks}>
+          Habit Journal
+        </Link>
+      </nav>
+
       <Routes>
         <Route path="/atomic-habits" element={<Weather />}></Route>
         <Route path="/habit-journal" element={<UserLists />}></Route>
