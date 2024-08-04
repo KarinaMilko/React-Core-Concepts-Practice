@@ -28,9 +28,13 @@ class WeatherClass extends Component {
   componentDidMount() {
     this.loadWeather();
   }
-  componentDidUpdate(tempUnit, windUnit) {
-    if (tempUnit !== this.state.tempUnit || windUnit !== this.state.windUnit)
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevState.tempUnit !== this.state.tempUnit ||
+      prevState.windUnit !== this.state.windUnit
+    ) {
       this.loadWeather();
+    }
   }
   windUnitChange = (e) => {
     this.setState({ windUnit: e.target.value });
