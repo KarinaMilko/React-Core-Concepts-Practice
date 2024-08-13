@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import styles from "./Slider.module.sass";
-import classNames from "classnames";
 
 function Slider({ imageUrls }) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -8,12 +7,10 @@ function Slider({ imageUrls }) {
   const [delay, setDelay] = useState("1000");
 
   const prevSlide = () => {
-    if (currentSlideIndex > 0) {
-      setCurrentSlideIndex(
-        (currentSlideIndex) =>
-          (currentSlideIndex - 1 + imageUrls.length) % imageUrls.length
-      );
-    }
+    setCurrentSlideIndex(
+      (currentSlideIndex) =>
+        (currentSlideIndex - 1 + imageUrls.length) % imageUrls.length
+    );
   };
 
   const nextSlide = () => {
@@ -60,7 +57,7 @@ function Slider({ imageUrls }) {
           {">"}
         </button>
       </div>
-      Timer delay, ms:{" "}
+      <label>Timer delay, ms: </label>
       <input
         type="text"
         placeholder="Enter the slide transition delay"
