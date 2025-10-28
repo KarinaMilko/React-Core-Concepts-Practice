@@ -1,27 +1,17 @@
-// import UserLists from "./components/UserLists";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-// function App() {
-//   return (
-//     <>
-//       <UserLists />;
-//     </>
-//   );
-// }
+import Books from "./pages/Books";
+import BasePage from "./pages/BasePage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./components/NotFound";
 
-// export default App;
-
-//----------------------------------------------------------------
-
-// import SignUpForms from "./components/SignUpForms";
-
-// function App() {
-//   return <SignUpForms />;
-// }
-
-// export default App;
-
-//---------------------------------------------------------------
+import UserLists from "./components/UserLists";
+import SignUpForms from "./components/SignUpForms";
 import Slider from "./components/Slider";
+import Weather from "./components/Weather";
+import WeatherClass from "./components/WeatherClass";
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   const imageUrls = [
@@ -35,64 +25,26 @@ function App() {
 
   return (
     <>
-      <Slider imageUrls={imageUrls} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<BasePage />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/books/*" element={<Books />}></Route>
+
+            <Route path="/userlists" element={<UserLists />} />
+            <Route path="/signup" element={<SignUpForms />} />
+            <Route path="/slider" element={<Slider imageUrls={imageUrls} />} />
+            <Route path="/weather" element={<Weather />} />
+            <Route path="/weather-class" element={<WeatherClass />} />
+            <Route path="/profile" element={<UserProfilePage />} />
+
+            <Route path="*" element={<NotFound />}></Route>
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }
 
 export default App;
-//---------------------------------------------------------------------
-// import Weather from "./components/Weather";
-
-// function App() {
-//   return (
-//     <>
-//       <Weather />
-//     </>
-//   );
-// }
-
-// export default App;
-// -------------------------------------------------------------
-
-// import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-// import Books from "./pages/Books";
-// import BasePage from "./pages/BasePage";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import NotFound from "./components/NotFound";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<BasePage />}>
-//           <Route index element={<Home />}></Route>
-//           <Route path="/about" element={<About />}></Route>
-//           <Route path="/books/*" element={<Books />}></Route>
-//           <Route path="*" element={<NotFound />}></Route>
-//         </Route>
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-//-----------------------------------------------------
-
-// import WeatherClass from "./components/WeatherClass";
-
-// function App() {
-//   return <WeatherClass />;
-// }
-
-// export default App;
-//------------------------------------------------------------------------
-// import UserProfilePage from "./pages/UserProfilePage";
-
-// function App() {
-//   return <UserProfilePage />;
-// }
-
-// export default App;
